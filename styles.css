@@ -1,0 +1,384 @@
+/* @import url('https://fonts.cdnfonts.com/css/colonna-mt');  */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Fascinate&family=Fredoka&family=Judson&family=Montserrat&family=Poppins:ital,wght@0,200;0,400;1,400&family=Preahvihear&family=Work+Sans&display=swap');
+#result {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 0.3em;
+    place-items: center;
+    
+}
+.meal:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    background-color:  #3498dbc7;
+    border-radius: 5px;
+}
+
+
+@media (min-width: 600px) {
+    #result {
+        grid-template-columns: repeat(4, 1fr);
+        
+        
+    }
+}
+
+.meal {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 5%;
+    padding: 10px;
+    text-align: center; 
+    width: 90%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+
+.meal img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px; 
+}
+
+
+@media (min-width: 600px) {
+    .meal:hover {
+        transform: scale(1.05);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        background-color:  #3498dbc7;
+        border-radius: 5px;
+    }
+    
+}
+
+#search-container {
+    
+    text-align: center;
+}
+#search {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+    margin-top: 1px;
+    width: 40%;
+}
+
+#btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5; 
+    color:#3498db;
+    cursor: pointer;
+    margin-top: 1%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Colonna MT', sans-serif;
+    
+}
+
+#header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px;
+
+  
+}
+#header img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+   
+}
+
+#navbar {
+
+    max-width: 100%;
+    
+    animation: rubberBand 1.5s ease infinite;
+}
+.random-dish {
+ 
+ 
+  font-style: italic;
+  font-variant: small-caps;
+  
+}
+  
+@keyframes rubberBand {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.25);
+    }
+    40% {
+      transform: scale(0.95);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+#blueDiv {
+    /* height: 60vh;  */
+    height: 47vh;
+    background-color: #3498db;
+    box-shadow:  0 0 10px rgba(71, 78, 122, 0.563); 
+    border-radius: 2px;
+}
+
+#content {
+    padding: 20px;
+}
+
+
+
+#navbar:hover {
+    
+    transform: scale(1.2); }
+
+p{
+    font-family: 'Colonna MT', sans-serif;
+    color: rgb(255, 255, 255);
+    
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+.para {
+    /* flex: 1; */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left; 
+    width: 50%;;
+  }
+
+  @media screen and (max-width: 600px) {
+    .para {
+      width: 100%; 
+    }
+  
+    p {
+      font-size: 1rem; 
+    }
+
+    #blueDiv {
+      height: 65vh; 
+      background-color: #3498db;
+      box-shadow:  0 0 10px rgba(71, 78, 122, 0.563); 
+      border-radius: 2px;
+  }
+
+
+
+  }  
+
+
+
+  #meal-container {
+    max-width: 400px;
+    margin: 0px auto;
+    
+    flex: 1;
+    margin-right: 0;
+  }
+
+  #meal-image {
+    max-width: 52%;
+    height: auto;
+    border-radius: 50%;
+    animation: swing 4s ease-in-out infinite;
+  }  
+
+  #meal-details {
+    text-align: center;
+  }
+
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(7deg) scale(1.05);
+    }
+    50% {
+      transform: rotate(-7deg) scale(1.05);
+    }
+    75% {
+      transform: rotate(7deg) scale(1.05);
+    }
+  }
+
+  @media (max-width: 600px) {
+    #meal-container {
+      max-width: 100%; 
+      margin: 10px; 
+    }
+  
+    #meal-image {
+      max-width: 30%; 
+    }
+    
+    .lm{
+        
+        max-width: 20%;
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+        margin-top: 10px;
+        
+    } 
+  
+  }
+
+ .lm{
+    
+    max-width: 20%;
+    margin-top: 70px;
+ } 
+  
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  border-radius: 10px;
+  z-index: 999;
+  font-size: 1rem;
+  
+  /* ///////////////////ng */
+  font-family: 'Poppins';
+
+  
+}
+
+#meal-name1{
+  font-family: 'Poppins';
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+
+
+}
+
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 10px;
+  
+}
+
+.tab-button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  outline: none;
+  margin-right: 5px;
+  border-radius: 5px;
+  
+  font-size: 1.5rem;
+  /* ///////////////////fhf */
+  font-family: 'Poppins';
+  
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+  
+}
+
+.active {
+  background-color:  #3498dbc7;
+  color: #fff;
+  
+}
+
+/* Close button styles */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #555;
+  font-size: 20px;
+}
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 998;
+}
+
+
+
+
+#meal-image1 {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow */
+  display: block;
+  margin: 0 auto; 
+  border-radius: 10px;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow the images to wrap to the next line */
+  margin-top: 0px;
+}
+
+.lmimg {
+  width: calc(50% - 10px); /* Make the images responsive and two images per row */
+  max-width: 150px; /* Set the maximum width of the images */
+  border-radius: 10px; /* Apply a border-radius for curved edges */
+  margin: 5px; /* Add some spacing between images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Apply a shadow effect */
+}
+
+@media screen and (max-width: 600px) {
+  .lmimg {
+    width: 100%; /* On screens smaller than 600px, make the images take full width */
+  }
+}
