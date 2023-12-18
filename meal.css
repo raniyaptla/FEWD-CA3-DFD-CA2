@@ -63,7 +63,7 @@
         height: auto;
         max-height: 200px;
         border-radius: 10px;
-        margin: 0 auto; /* Center image */
+        margin: 0 auto; 
         place-content: center;
       }
   
@@ -76,7 +76,7 @@
       #right-section {
         float: none;
         text-align: center; 
-        /* width: calc(100% - 320px); */
+        
         width: 100%;
       }
   

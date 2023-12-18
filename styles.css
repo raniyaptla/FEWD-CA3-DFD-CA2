@@ -1,4 +1,4 @@
-/* @import url('https://fonts.cdnfonts.com/css/colonna-mt');  */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Fascinate&family=Fredoka&family=Judson&family=Montserrat&family=Poppins:ital,wght@0,200;0,400;1,400&family=Preahvihear&family=Work+Sans&display=swap');
 #result {
@@ -168,7 +168,7 @@ p{
     padding: 20px;
   }
 .para {
-    /* flex: 1; */
+    
     padding: 10px;
     box-sizing: border-box;
     text-align: left; 
@@ -278,8 +278,6 @@ p{
   border-radius: 10px;
   z-index: 999;
   font-size: 1rem;
-  
-  /* ///////////////////ng */
   font-family: 'Poppins';
 
   
@@ -311,7 +309,7 @@ p{
   border-radius: 5px;
   
   font-size: 1.5rem;
-  /* ///////////////////fhf */
+  
   font-family: 'Poppins';
   
 }
@@ -328,7 +326,6 @@ p{
   
 }
 
-/* Close button styles */
 .close {
   position: absolute;
   top: 10px;
@@ -354,9 +351,9 @@ p{
 
 
 #meal-image1 {
-  width: 250px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow */
+  width: 250px; 
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
   display: block;
   margin: 0 auto; 
   border-radius: 10px;
@@ -365,20 +362,20 @@ p{
 #content {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow the images to wrap to the next line */
+  flex-wrap: wrap;
   margin-top: 0px;
 }
 
 .lmimg {
-  width: calc(50% - 10px); /* Make the images responsive and two images per row */
-  max-width: 150px; /* Set the maximum width of the images */
-  border-radius: 10px; /* Apply a border-radius for curved edges */
-  margin: 5px; /* Add some spacing between images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Apply a shadow effect */
+  width: calc(50% - 10px); 
+  max-width: 150px; 
+  border-radius: 10px; 
+  margin: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 @media screen and (max-width: 600px) {
   .lmimg {
-    width: 100%; /* On screens smaller than 600px, make the images take full width */
+    width: 100%; 
   }
 }

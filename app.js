@@ -42,13 +42,13 @@ function searchMeals() {
           getMeal.setAttribute('id', 'meal');
           getMeal.setAttribute('class', 'meal');
 
-          // Pass the meal ID to the openMealDetailsPage function
+          
           getMeal.addEventListener('click', () => openMealDetailsPage(meal.idMeal));
 
           const title = document.createElement('h3');
           const img = document.createElement('img');
 
-          // Add a click event listener to the image
+          
           img.addEventListener('click', () => openMealDetailsPage(meal.idMeal));
 
           title.innerText = meal.strMeal;
@@ -65,24 +65,23 @@ function searchMeals() {
           getResult.append(meal);
         });
 
-        // Update the previousSearch value
+        
         previousSearch = x;
 
-        // Reset apiCalled to allow the next API call
+        
         apiCalled = false;
 
-        // Scroll to the result section after the data is loaded
+      
         scrollToResult();
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
-        // getResult.innerHTML = 'Error fetching data.';
+        
 
         alert('Error fetching data. Please try again.');
 
         
 
-        // Reset apiCalled and previousSearch in case of an error
         apiCalled = false;
         previousSearch = '';
       });
@@ -91,7 +90,7 @@ function searchMeals() {
 
 
 function openMealDetailsPage(mealId) {
-  // Redirect to a new webpage with the meal ID
+ 
   window.location.href = `meal.html?mealId=${mealId}`;
 }
 
@@ -118,12 +117,12 @@ async function getRandomMeal() {
 
       mealContainer.style.display = 'block';
 
-      // Store the meal details in a variable for later use
+      
       window.currentMeal = meal;
 
       
     } else {
-      // Hide the meal container if no meal is available
+    
       mealContainer.style.display = 'none';
     }
   } catch (error) {
@@ -136,17 +135,15 @@ function closeModal() {
   const modal = document.getElementById('modal');
   modal.style.display = 'none';
 
-  // Restore the webpage
-  document.body.style.overflow = ''; // Enable scrolling
+  document.body.style.overflow = ''; 
   document.getElementById('overlay').style.display = 'none';
 }
 
-// Function to open the modal with tabs
 function openModal() {
-  // Retrieve the stored meal details
+
   const meal = window.currentMeal;
-  // Dim the rest of the webpage
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
+  
+  document.body.style.overflow = 'hidden'; 
   document.getElementById('overlay').style.display = 'block';
 
   const modal = document.getElementById('modal');
@@ -218,7 +215,7 @@ function createList(items) {
   });
   return list.outerHTML;
 }
-// Add an event listener to the meal image to open the modal
+
 document.getElementById('meal-image').addEventListener('click', openModal);
 
 getRandomMeal();
