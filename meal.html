@@ -10,7 +10,7 @@
 <body>
   
   <div id="header">
-    <img src="gourmeti.png" alt="gourmeti">
+    <img src="gourmeti.png" alt="gourmeti"  onclick="redirectToIndex()" >
     
   </div>
 
@@ -39,6 +39,13 @@
   </div>
 
   <script >
+
+    function redirectToIndex() {
+      window.location.href = "index.html";
+  }
+
+
+
     document.addEventListener('DOMContentLoaded', function () {
     
     const urlParams = new URLSearchParams(window.location.search);
