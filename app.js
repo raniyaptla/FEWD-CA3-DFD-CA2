@@ -1,16 +1,19 @@
 
+//enter key if i press it should pass the value
 document.getElementById('search').addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
         searchMeals();
   }
 });
 
+//to scroll to the part of teh page where the results come
+
 function scrollToResult() {
   const resultContainer = document.getElementById('result-container');
   resultContainer.scrollIntoView({ behavior: 'smooth' });
 }
 
-
+//getting the search input from the search button
 var btn = document.getElementById('btn');
 
 btn.onclick = searchMeals;
@@ -31,6 +34,7 @@ function searchMeals() {
     var x = document.getElementById('search').value.trim();
 
     const getResult = document.getElementById('result');
+    //dynamically fetching from api
 
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${x}`)
@@ -47,6 +51,7 @@ function searchMeals() {
 
           const title = document.createElement('h3');
           const img = document.createElement('img');
+          //when i click on image it redirects to new page
 
           
           img.addEventListener('click', () => openMealDetailsPage(meal.idMeal));
@@ -96,7 +101,7 @@ function openMealDetailsPage(mealId) {
 
 
 
-
+//function to fetch random meal 
 async function getRandomMeal() {
   const mealContainer = document.getElementById('meal-details');
 
@@ -130,7 +135,7 @@ async function getRandomMeal() {
   }
 }
 
-
+//function to close the modal
 function closeModal() {
   const modal = document.getElementById('modal');
   modal.style.display = 'none';
@@ -138,7 +143,7 @@ function closeModal() {
   document.body.style.overflow = ''; 
   document.getElementById('overlay').style.display = 'none';
 }
-
+//funcction to open the modal and display the ingredients and instructions
 function openModal() {
 
   const meal = window.currentMeal;
@@ -178,7 +183,7 @@ function openModal() {
 
 }
 
-
+//adding differetn tabs to the modal
 
 function openTab(evt, tabName) {
   const tabcontent = document.getElementsByClassName('tab-content');
@@ -194,7 +199,7 @@ function openTab(evt, tabName) {
 }
 
 
-
+//displaying the ingredients in list format
 function getIngredientsList(meal) {
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
