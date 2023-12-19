@@ -134,8 +134,8 @@ body {
   
 
 #blueDiv {
-    /* height: 60vh;  */
-    height: 47vh;
+    height: 60vh; 
+/*     height: 47vh; */
     background-color: #3498db;
     box-shadow:  0 0 10px rgba(71, 78, 122, 0.563); 
     border-radius: 2px;
